@@ -22,7 +22,7 @@
         >
           Toggle
         </button>
-        <div x-show="open" x-cloak>
+        <div x-show="open" x-transition x-cloak>
           <p class="bg-gray-200 p-4 my-6 rounded">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis
             exercitationem impedit mollitia dolorum laborum! Doloremque quaerat
@@ -32,6 +32,7 @@
         <div class="my-4">
           The name is <span x-text="name" class="font-bold"></span>
         </div>
+        <div x-effect="console.log(open)"></div>
       </div>
     </div>
   </body>

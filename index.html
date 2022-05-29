@@ -15,7 +15,19 @@
   <body>
     <div class="container mx-auto mt-6 max-w-sm">
       <h1 class="text-5xl mb-4">Alpine.js Demo</h1>
-      <div x-data="{ open: false, name : 'Tony Stark', search: ''}">
+      <div
+        x-data="{ 
+        open: false, 
+        name : 'Tony Stark', 
+        search: '',
+        posts: [
+        {title: 'Post One'},
+        {title: 'Post Two'},
+        {title: 'Post Three'},
+        {title: 'Post Four'},
+        ]
+      }"
+      >
         <button
           x-on:click="open = !open"
           x-bind:class="open ? 'bg-blue-800' : 'bg-slate-700'"
@@ -48,7 +60,14 @@
         <template x-if="open">
           <div>Show the template if open is true</div>
         </template>
+
+        <!--x-for-->
+        <h3 class="text-3xl mt-6 mb-3 font-bold">Posts</h3>
+        <template x-for="post in posts">
+          <div x-text="post.title"></div>
+        </template>
       </div>
+      <!--div with x-data model-->
     </div>
   </body>
 </html>

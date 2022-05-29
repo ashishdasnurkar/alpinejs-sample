@@ -45,6 +45,9 @@
             >Searching for: <span x-text="search"></span
           ></span>
         </p>
+        <template x-if="open">
+          <div>Show the template if open is true</div>
+        </template>
       </div>
     </div>
   </body>

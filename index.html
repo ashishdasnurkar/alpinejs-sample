@@ -88,7 +88,16 @@
             Bye
           </button>
         </div>
+        <!--x-html-->
         <div x-html="(await axios.get('./partial.html')).data">...</div>
+
+        <!--$el-->
+        <button
+          x-on:click="$el.innerHTML = 'Hello World!'"
+          class="mt-4 p-4 border"
+        >
+          Replace this
+        </button>
       </div>
       <!--div with x-data model-->
     </div>

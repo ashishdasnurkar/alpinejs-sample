@@ -72,6 +72,16 @@
         >
           Add Post
         </button>
+        <!--x-refs-->
+        <div class="my-6">
+          <div x-ref="text">Hello world</div>
+          <button
+            @click="$refs.text.remove()"
+            class="bg-green-800 text-white px-4 py-2 rounded-lg mt-6"
+          >
+            Bye
+          </button>
+        </div>
       </div>
       <!--div with x-data model-->
     </div>

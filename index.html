@@ -112,8 +112,21 @@
             >Notify</buton
           >
         </div>
+
+        <!-- $data -->
+        <button
+          @click="getLatestPost($data.posts)"
+          class="bg-orange-800 text-white p-2 mt-4 rounded-lg"
+        >
+          Get Latest Post
+        </button>
       </div>
       <!--div with x-data model-->
     </div>
+    <script>
+      function getLatestPost(posts) {
+        console.log(posts.slice(-1).pop());
+      }
+    </script>
   </body>
 </html>

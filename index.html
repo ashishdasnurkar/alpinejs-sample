@@ -103,6 +103,15 @@
         <div
           x-init="$watch('posts', value => console.log(value, ' - Cool, innit?'))"
         ></div>
+
+        <!-- $dispatch-->
+        <div @notify="alert('You have been notified!')">
+          <buton
+            @click="$dispatch('notify')"
+            class="bg-green-700 text-white p-2 mt-4 rounded-lg"
+            >Notify</buton
+          >
+        </div>
       </div>
       <!--div with x-data model-->
     </div>

@@ -123,6 +123,9 @@
       </div>
       <!--div with x-data model-->
     </div>
+    <footer x-data class="text-center mt-10">
+      <p>Copyright &copy; <span x-text="new Date().getFullYear()"></span></p>
+    </footer>
     <script>
       function getLatestPost(posts) {
         console.log(posts.slice(-1).pop());

@@ -18,6 +18,13 @@
       ut quas, sunt dignissimos minima in. Ad dolorem fuga perspiciatis, saepe
       quasi repellendus facere, deleniti totam cumque, eos consequuntur
       distinctio?
+      <button
+        @click="$store.darkMode.toggle()"
+        :class="$store.darkMode.on && 'bg-gray-500'"
+        class="block bg-gray-200 mt-4 text-xs px-4 py-2"
+      >
+        Toggle Dark Mode
+      </button>
     </div>
     <script>
       document.addEventListener("alpine:init", () => {
